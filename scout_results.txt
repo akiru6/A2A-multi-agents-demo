@@ -1,0 +1,3 @@
+vercel/ai
+feder-cr/Jobs_Applier_AI_Agent_AIHawk
+patchy631/ai-engineering-hub
