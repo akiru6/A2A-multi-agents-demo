@@ -233,11 +233,11 @@ orchestrator_card = AgentCard(
 
 
 # ==============================================================================
-# SECTION 4: A2A SERVER INFRASTRUCTURE (Unchanged)
+# SECTION 4: A2A SERVER INFRASTRUCTURE
 # ==============================================================================
 servers = []
 def create_agent_a2a_server(agent: Agent, agent_card: AgentCard) -> A2AStarletteApplication:
-    # ... (This section remains identical to your original code)
+
     runner = Runner(
         app_name=agent.name,
         agent=agent,
@@ -254,7 +254,7 @@ def create_agent_a2a_server(agent: Agent, agent_card: AgentCard) -> A2AStarlette
     return A2AStarletteApplication(agent_card=agent_card, http_handler=request_handler)
 
 def run_agent_in_background(create_agent_function, port, name):
-    # ... (This section remains identical to your original code)
+
     def run():
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
@@ -273,7 +273,7 @@ def run_agent_in_background(create_agent_function, port, name):
     return thread
 
 # ==============================================================================
-# SECTION 5: MAIN EXECUTION BLOCK (Updated with new API key check)
+# SECTION 5: MAIN EXECUTION BLOCK
 # ==============================================================================
 def main():
     """Synchronous main function to launch and monitor agent servers."""
